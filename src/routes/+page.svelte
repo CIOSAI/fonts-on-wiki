@@ -5,6 +5,7 @@
 	import ListView from '$lib/ListView.svelte';
 	import GridView from '$lib/GridView.svelte';
 	import FontDetail from '$lib/FontDetail.svelte';
+	import FoundryDetail from '$lib/FoundryDetail.svelte';
 	import { base } from '$app/paths';
 </script>
 
@@ -24,7 +25,7 @@
 		<ListIcon />
 	{/if}
 </button>
-<div class="grid grid-cols-5">
+<div class="grid grid-cols-5 gap-4">
 	<div class="col-span-3">
 		{#if $viewAsList}
 			<ListView />
@@ -34,10 +35,12 @@
 	</div>
 
 	<div class="col-span-2">
-		<div class="sticky top-1">
+		<div class="sticky top-8">
 			{#if $previewing}
 				{#if $previewing.type == 'font'}
 					<FontDetail key={$previewing.key} />
+				{:else if $previewing.type == 'foundry'}
+					<FoundryDetail key={$previewing.key} />
 				{/if}
 			{:else}
 				<p>Click on an entity to see its details</p>

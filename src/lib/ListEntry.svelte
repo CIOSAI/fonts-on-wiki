@@ -2,6 +2,7 @@
 	import type { FontEntry } from './wikidata';
 	import { isMissing } from './wikidata';
 	import FontNameButton from './FontNameButton.svelte';
+	import FoundryButton from './FoundryButton.svelte';
 
 	export let entry: FontEntry;
 </script>
@@ -14,7 +15,7 @@
 		{#if isMissing(entry.foundryLabel)}
 			:(
 		{:else}
-			{entry.foundryLabel.value}
+			<FoundryButton {entry} />
 		{/if}
 	</td>
 	<td class="px-4 border-b-2 border-yellow-500">
