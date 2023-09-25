@@ -1,7 +1,7 @@
 import { readable } from 'svelte/store';
 
 const QUERY = `
-select distinct ?font ?fontLabel ?sample ?foundry ?foundryLabel ?countryOfOperation ?countryOfOperationLabel ?website
+select distinct ?font ?fontLabel ?sample ?foundry ?foundryLabel ?countryOfOperation ?countryOfOperationLabel ?website 
 where {
   ?font wdt:P31/wdt:P279* wd:Q17451;
         wdt:P4586         ?foundry.
