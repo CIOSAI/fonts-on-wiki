@@ -9,3 +9,9 @@
 		<slot />
 	</div>
 </main>
+
+<style lang="postcss">
+	:global(html) {
+		background-color: theme(colors.yellow.400);
+	}
+</style>
