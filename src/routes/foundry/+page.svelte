@@ -1,5 +1,4 @@
-<script lang="ts">
-</script>
-
-<h1>Foundry Page</h1>
-<p class="italic">you're not supposed to see this</p>
+<p class="text-lg text-lime-800 italic">
+	Oops... 😳 you're not supposed to see this! Click on "Home" at the corner to go back to safety
+	before they get you 😱
+</p>
