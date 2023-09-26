@@ -43,7 +43,7 @@
 					<FoundryDetail key={$previewing.key} />
 				{/if}
 			{:else}
-				<p>Click on an entity to see its details</p>
+				<p class="text-lime-800">Click on an entity to see its details</p>
 			{/if}
 		</div>
 	</div>
