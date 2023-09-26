@@ -17,7 +17,7 @@ const config = {
       assets: 'dist',
     }),
     paths: {
-      base: dev ? '' : '/CIOSAI.github.io/fonts-on-wiki',
+      base: dev ? '' : '/fonts-on-wiki',
     }
 	}
 };
