@@ -41,8 +41,6 @@
 				</tr>
 			{/if}
 		</table>
-		<a class="underline hover:italic" href={`${base}/foundry/${entry.foundryLabel.value}`}
-			>details</a
-		>
+		<a class="underline hover:italic" href={`${base}/foundry/`}>details</a>
 	</div>
 </div>
