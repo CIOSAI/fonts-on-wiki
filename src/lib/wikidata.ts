@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store';
+import { writable } from 'svelte/store';
 
 const QUERY = `
 select distinct ?font ?fontLabel ?sample ?foundry ?foundryLabel ?countryOfOperation ?countryOfOperationLabel ?website 
@@ -41,7 +41,10 @@ interface FontEntry {
 	website: WkdUri;
 }
 
-export const wikifonts = readable(await getData());
+export const wikifonts = writable<FontEntry[]>([]);
+getData().then((res) => {
+	wikifonts.set(res);
+});
 export const isMissing = (col: WkdLiteral) => {
 	return !col || /(http.*)|(Q[0-9]+)/.test(col.value);
 };
