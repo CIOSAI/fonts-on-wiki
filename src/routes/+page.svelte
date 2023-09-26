@@ -7,13 +7,8 @@
 	import FontDetail from '$lib/FontDetail.svelte';
 	import FoundryDetail from '$lib/FoundryDetail.svelte';
 	import CountryDetail from '$lib/CountryDetail.svelte';
-	import { base } from '$app/paths';
 </script>
 
-<!-- <h1>Welcome to SvelteKit</h1>
-<p class="italic">
-	Visit <a href={`${base}/foundry`}>foundry page</a>
-</p> -->
 <button
 	class="w-12 aspect-square text-yellow-600 hover:text-lime-800"
 	on:click={() => {
