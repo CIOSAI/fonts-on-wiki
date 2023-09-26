@@ -3,6 +3,7 @@
 	import { isMissing } from './wikidata';
 	import FontNameButton from './FontNameButton.svelte';
 	import FoundryButton from './FoundryButton.svelte';
+	import CountryButton from './CountryButton.svelte';
 
 	export let entry: FontEntry;
 </script>
@@ -22,7 +23,7 @@
 		{#if isMissing(entry.countryOfOperationLabel)}
 			:(
 		{:else}
-			{entry.countryOfOperationLabel.value}
+			<CountryButton {entry} />
 		{/if}
 	</td>
 </tr>

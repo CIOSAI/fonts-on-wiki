@@ -2,6 +2,7 @@
 	import { type FontEntry, wikifonts } from '$lib/wikidata';
 	import { isMissing } from '$lib/wikidata';
 	import FoundryButton from './FoundryButton.svelte';
+	import CountryButton from './CountryButton.svelte';
 
 	export let key: string;
 
@@ -29,7 +30,7 @@
 				<tr><td>by: </td><td><FoundryButton {entry} /></td></tr>
 			{/if}
 			{#if !isMissing(entry.countryOfOperationLabel)}
-				<tr><td>from: </td><td>{entry.countryOfOperationLabel.value}</td></tr>
+				<tr><td>from: </td><td><CountryButton {entry} /></td></tr>
 			{/if}
 		</table>
 	</div>

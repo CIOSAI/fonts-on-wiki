@@ -6,6 +6,7 @@
 	import GridView from '$lib/GridView.svelte';
 	import FontDetail from '$lib/FontDetail.svelte';
 	import FoundryDetail from '$lib/FoundryDetail.svelte';
+	import CountryDetail from '$lib/CountryDetail.svelte';
 	import { base } from '$app/paths';
 </script>
 
@@ -41,6 +42,8 @@
 					<FontDetail key={$previewing.key} />
 				{:else if $previewing.type == 'foundry'}
 					<FoundryDetail key={$previewing.key} />
+				{:else if $previewing.type == 'country'}
+					<CountryDetail key={$previewing.key} />
 				{/if}
 			{:else}
 				<p class="text-lime-800">Click on an entity to see its details</p>

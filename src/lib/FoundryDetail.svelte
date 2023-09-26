@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { type FontEntry, wikifonts } from '$lib/wikidata';
 	import { isMissing } from '$lib/wikidata';
+	import CountryButton from './CountryButton.svelte';
+	import FoundryButton from './FoundryButton.svelte';
+
 	export let key: string;
+
 	let entry: FontEntry;
 	$: entry = $wikifonts.filter((row) => {
 		return row.foundryLabel && row.foundryLabel.value && row.foundryLabel.value == key;
@@ -33,7 +37,7 @@
 			{#if !isMissing(entry.countryOfOperationLabel)}
 				<tr>
 					<td>based in: </td>
-					<td>{entry.countryOfOperationLabel.value}</td>
+					<td><CountryButton {entry} /></td>
 				</tr>
 			{/if}
 		</table>
