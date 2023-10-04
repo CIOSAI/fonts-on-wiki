@@ -34,7 +34,15 @@
 		<p>{fonts.length} fonts in record</p>
 	</div>
 	<div class="my-8" />
-	<p class=" text-justify">
+	<h1 class="text-lg">Foundry</h1>
+	<p class="text-justify">
+		{#each foundries as foundry}
+			{foundry},&nbsp;
+		{/each}
+	</p>
+	<div class="my-8" />
+	<h1 class="text-lg">Font</h1>
+	<p class="text-justify">
 		{#each fonts as font}
 			{font},&nbsp;
 		{/each}
