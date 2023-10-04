@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { wikifonts } from '$lib/wikidata';
 	import { isMissing } from '$lib/wikidata';
+	import { base } from '$app/paths';
 
 	export let key: string;
 
@@ -32,4 +33,5 @@
 	<div class="flex flex-wrap">
 		<p>{filtered.length} foundries recorded</p>
 	</div>
+	<a class="underline hover:italic" href={`${base}/country/`}>details</a>
 </div>
