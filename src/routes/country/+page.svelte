@@ -34,9 +34,9 @@
 		<p>{fonts.length} fonts in record</p>
 	</div>
 	<div class="my-8" />
-	<div class="flex flex-wrap text-justify">
+	<p class=" text-justify">
 		{#each fonts as font}
-			<p>{font},&nbsp;</p>
+			{font},&nbsp;
 		{/each}
-	</div>
+	</p>
 </div>
