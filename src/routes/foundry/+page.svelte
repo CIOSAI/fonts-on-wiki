@@ -45,6 +45,10 @@
 					<div class="border-yellow-500 border-2 aspect-square m-2">
 						{#if entry.sample}
 							<FontImageButton {entry} />
+						{:else}
+							<div class="flex h-full justify-center items-center">
+								<p class="text-yellow-600">:(</p>
+							</div>
 						{/if}
 					</div>
 				</div>
